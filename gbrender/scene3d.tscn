@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://chtedc1dvseij"]
+
+[ext_resource type="Script" path="res://gbrender/turning_cube.gd" id="1_05h40"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pcq5l"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_l1280"]
+sky_material = SubResource("ProceduralSkyMaterial_pcq5l")
+
+[sub_resource type="Environment" id="Environment_t5m2h"]
+background_mode = 2
+background_energy_multiplier = 0.85
+sky = SubResource("Sky_l1280")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ysxa"]
+
+[node name="Scene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 4, 0)
+light_energy = 0.305
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_t5m2h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.925851, 0.330224, -0.183718, -0.377889, 0.809069, -0.450119, 0, 0.486168, 0.873866, 0, 0, 0)
+mesh = SubResource("BoxMesh_2ysxa")
+script = ExtResource("1_05h40")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.952406, 0.304831, 0, -0.304831, 0.952406, -0.000730515, 1.68212, 3.48279)
+current = true
