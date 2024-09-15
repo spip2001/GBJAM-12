@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafk5r5bei68j"]
+
+[ext_resource type="PackedScene" uid="uid://tx2gf3a00lv6" path="res://assets3d/mansion/blocks.blend" id="1_tw23j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxmaa"]
+
+[node name="blocks" instance=ExtResource("1_tw23j")]
+
+[node name="Dalle" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_pxmaa")

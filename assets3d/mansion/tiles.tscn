@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://sjw0djjlahte"]
+
+[ext_resource type="PackedScene" uid="uid://tx2gf3a00lv6" path="res://assets3d/mansion/blocks.blend" id="1_4uif8"]
+
+[node name="MansionTiles" type="Node3D"]
+
+[node name="blocks" parent="." instance=ExtResource("1_4uif8")]

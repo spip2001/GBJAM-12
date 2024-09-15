@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://pummtu3l8ftj"]
+
+[ext_resource type="Shader" path="res://gbrender/color_canvas.gdshader" id="1_77hxf"]
+[ext_resource type="Texture2D" uid="uid://dipsjq18efnhv" path="res://gbrender/empty.png" id="2_evt7s"]
+[ext_resource type="Script" path="res://gbrender/sprite_3d_to_2d.gd" id="3_d7hpg"]
+[ext_resource type="PackedScene" uid="uid://chtedc1dvseij" path="res://gbrender/scene3d.tscn" id="4_x2hx7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xuuc"]
+shader = ExtResource("1_77hxf")
+shader_parameter/color3 = Vector3(1, 1, 1)
+shader_parameter/color2 = Vector3(0.533, 0.752, 0.439)
+shader_parameter/color1 = Vector3(0.203, 0.407, 0.337)
+shader_parameter/color0 = Vector3(0.031, 0.094, 0.125)
+
+[node name="GBRender" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" node_paths=PackedStringArray("viewport")]
+material = SubResource("ShaderMaterial_7xuuc")
+texture = ExtResource("2_evt7s")
+centered = false
+script = ExtResource("3_d7hpg")
+viewport = NodePath("../../SubViewport")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(160, 144)
+
+[node name="Scene" parent="SubViewport" instance=ExtResource("4_x2hx7")]

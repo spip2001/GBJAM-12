@@ -13,9 +13,12 @@ void vertex() {
 void fragment() {
 	vec4 c = texture(TEXTURE, UV);
 	float grey = (c.r + c.g + c.b) / 3.0;
-	float rnd = fract(sin(dot(UV,vec2(12.9898,78.233))) * 43758.5453123);
 	
-	if (grey < 0.2) {
+	float rnd = (int(UV.x * 160.)) %2 == 0 
+		? ((int(UV.y * 144.)) %2 == 1 ? 0. : 0.9) 
+		: ((int(UV.y * 144.)) %2 == 0 ? 0. : 0.9);
+	
+	if (grey < 0.19) {
 		COLOR.rgb = color0;
 	} else if (grey < 0.35) {
 		COLOR.rgb = rnd < 0.5 ? color0 : color1;	
