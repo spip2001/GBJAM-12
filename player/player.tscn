@@ -45,8 +45,8 @@ spot_range = 20.0
 spot_angle = 46.49
 spot_angle_attenuation = 0.466516
 
-[node name="ActionTrigger" type="Area3D" parent="."]
+[node name="PlayerActionTrigger" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionTrigger"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerActionTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.708924)
 shape = SubResource("CylinderShape3D_pfa1p")

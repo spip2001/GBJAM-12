@@ -1,25 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://cws5t5y7hy65h"]
+[gd_scene load_steps=7 format=3 uid="uid://cws5t5y7hy65h"]
 
+[ext_resource type="Script" path="res://screens/game.gd" id="1_n2s3n"]
 [ext_resource type="PackedScene" uid="uid://pummtu3l8ftj" path="res://gbrender/gb_render.tscn" id="1_wj4n3"]
+[ext_resource type="Script" path="res://screens/action_ui.gd" id="2_bnn6q"]
+[ext_resource type="Theme" uid="uid://shhoi1a3qypn" path="res://screens/theme.tres" id="3_uxj4g"]
 [ext_resource type="Texture2D" uid="uid://bmvt0ntagfgu5" path="res://sprites/sprites.png" id="3_xmylr"]
+[ext_resource type="Script" path="res://screens/message_ui.gd" id="4_ys3bv"]
 
 [node name="MainGameScreen" type="Node2D"]
+script = ExtResource("1_n2s3n")
 
 [node name="GBRender" parent="." instance=ExtResource("1_wj4n3")]
 metadata/_edit_lock_ = true
 
 [node name="ActionUI" type="CanvasLayer" parent="."]
+script = ExtResource("2_bnn6q")
 
 [node name="SpriteA" type="Sprite2D" parent="ActionUI"]
+visible = false
 texture_filter = 1
 position = Vector2(112, 7)
 texture = ExtResource("3_xmylr")
 region_enabled = true
 region_rect = Rect2(0, 0, 12, 12)
 
-[node name="SpriteUse" type="Sprite2D" parent="ActionUI"]
+[node name="SpriteOpen" type="Sprite2D" parent="ActionUI"]
+visible = false
 texture_filter = 1
 position = Vector2(132, 7)
 texture = ExtResource("3_xmylr")
 region_enabled = true
 region_rect = Rect2(18, 0, 23, 8)
+
+[node name="SpriteUse" type="Sprite2D" parent="ActionUI"]
+visible = false
+texture_filter = 1
+position = Vector2(132, 7)
+texture = ExtResource("3_xmylr")
+region_enabled = true
+region_rect = Rect2(18, 8, 23, 8)
+
+[node name="SpriteLook" type="Sprite2D" parent="ActionUI"]
+visible = false
+texture_filter = 1
+position = Vector2(132, 7)
+texture = ExtResource("3_xmylr")
+region_enabled = true
+region_rect = Rect2(18, 16, 23, 8)
+
+[node name="SpriteTake" type="Sprite2D" parent="ActionUI"]
+visible = false
+texture_filter = 1
+position = Vector2(132, 7)
+texture = ExtResource("3_xmylr")
+region_enabled = true
+region_rect = Rect2(18, 24, 23, 8)
+
+[node name="MessageUI" type="CanvasLayer" parent="."]
+script = ExtResource("4_ys3bv")
+
+[node name="messageLabel" type="Label" parent="MessageUI"]
+offset_right = 105.0
+offset_bottom = 20.0
+theme = ExtResource("3_uxj4g")
+autowrap_mode = 2

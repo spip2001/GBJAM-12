@@ -24,7 +24,6 @@ window/stretch/scale_mode="integer"
 
 [gui]
 
-theme/custom_font="res://font/Early GameBoy.ttf"
 theme/default_font_antialiasing=0
 
 [input]

@@ -1,6 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://shhoi1a3qypn"]
 
-[ext_resource type="FontFile" uid="uid://bu0e4abt25khi" path="res://font/Early GameBoy.ttf" id="1_8yn46"]
+[ext_resource type="FontFile" uid="uid://ba865q0d3gs4k" path="res://font/font.png" id="1_a0gy8"]
 
 [resource]
-default_font = ExtResource("1_8yn46")
+default_font = ExtResource("1_a0gy8")
+default_font_size = 8

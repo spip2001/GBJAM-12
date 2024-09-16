@@ -1,8 +1,24 @@
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 
+signal near_something(msg: String)
 
-const SPEED = 5.0
+const SPEED = 4.0
 
+var keys = []
+
+# Key pick 
+var current_key_in_area: Key = null 
+
+func _process(delta):
+	
+	# What is near player ?
+	if current_key_in_area:
+		near_something.emit(current_key_in_area.label)
+	else:
+		near_something.emit("")
+		
+	if Input.is_action_just_pressed("a"):
+		print('A')
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -33,3 +49,9 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+func key_entered(key: Key):
+	current_key_in_area = key
+
+func key_exited(key: Key):
+	current_key_in_area = null

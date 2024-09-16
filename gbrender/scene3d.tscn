@@ -25,7 +25,7 @@ tonemap_mode = 1
 [node name="Player" parent="." instance=ExtResource("1_mo8ko")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23115, 3.16769)
 
-[node name="Mansion-1St-hallway" parent="." instance=ExtResource("1_12ic8")]
+[node name="room" parent="." instance=ExtResource("1_12ic8")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.831898, -0.554928, -0.000564347, -0.240713, 0.359938, 0.901389, -0.500003, 0.749999, -0.43301, 0, 5, 0)

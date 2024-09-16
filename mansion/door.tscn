@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4nsujiahwnyk"]
+
+[ext_resource type="PackedScene" uid="uid://c2tml4slbdgr8" path="res://assets3d/mansion/door.fbx" id="1_3mkds"]
+
+[node name="Door" type="Node3D"]
+
+[node name="door" parent="." instance=ExtResource("1_3mkds")]
