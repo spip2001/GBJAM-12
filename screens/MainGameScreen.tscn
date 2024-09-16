@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cws5t5y7hy65h"]
+
+[ext_resource type="PackedScene" uid="uid://pummtu3l8ftj" path="res://gbrender/gb_render.tscn" id="1_wj4n3"]
+[ext_resource type="Texture2D" uid="uid://bmvt0ntagfgu5" path="res://sprites/sprites.png" id="3_xmylr"]
+
+[node name="MainGameScreen" type="Node2D"]
+
+[node name="GBRender" parent="." instance=ExtResource("1_wj4n3")]
+metadata/_edit_lock_ = true
+
+[node name="ActionUI" type="CanvasLayer" parent="."]
+
+[node name="SpriteA" type="Sprite2D" parent="ActionUI"]
+texture_filter = 1
+position = Vector2(112, 7)
+texture = ExtResource("3_xmylr")
+region_enabled = true
+region_rect = Rect2(0, 0, 12, 12)
+
+[node name="SpriteUse" type="Sprite2D" parent="ActionUI"]
+texture_filter = 1
+position = Vector2(132, 7)
+texture = ExtResource("3_xmylr")
+region_enabled = true
+region_rect = Rect2(18, 0, 23, 8)

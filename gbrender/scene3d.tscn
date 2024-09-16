@@ -15,26 +15,33 @@ sky_material = SubResource("ProceduralSkyMaterial_pcq5l")
 background_mode = 2
 background_energy_multiplier = 0.01
 sky = SubResource("Sky_l1280")
-tonemap_mode = 2
+ambient_light_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+tonemap_mode = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_2ysxa"]
 
 [node name="Scene" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_mo8ko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23115, 5.16769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23115, 3.16769)
 
 [node name="Mansion-1St-hallway" parent="." instance=ExtResource("1_12ic8")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 5, 0)
-light_energy = 0.01
+transform = Transform3D(-0.831898, -0.554928, -0.000564347, -0.240713, 0.359938, 0.901389, -0.500003, 0.749999, -0.43301, 0, 5, 0)
+light_energy = 0.02
 shadow_enabled = true
+shadow_bias = 10.0
+shadow_normal_bias = 0.0
+shadow_opacity = 0.73
+shadow_blur = 0.0
+directional_shadow_mode = 0
+sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t5m2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.925851, 0.330224, -0.183718, -0.377889, 0.809069, -0.450119, 0, 0.486168, 0.873866, 0, 1.13519, 0)
+transform = Transform3D(0.925851, 0.330224, -0.183718, -0.377889, 0.809069, -0.450119, 0, 0.486168, 0.873866, -0.563814, 1.13519, -4.60743)
 mesh = SubResource("BoxMesh_2ysxa")
 script = ExtResource("1_05h40")

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tx2gf3a00lv6"
-path="res://.godot/imported/blocks.blend-02119a2b26fb9d10d6b77aec0e500c18.scn"
+uid="uid://dic88jesrd0ox"
+path="res://.godot/imported/items.blend-550e024b93b299d276d66868dc5f2de8.scn"
 
 [deps]
 
-source_file="res://assets3d/mansion/blocks.blend"
-dest_files=["res://.godot/imported/blocks.blend-02119a2b26fb9d10d6b77aec0e500c18.scn"]
+source_file="res://assets3d/mansion/items.blend"
+dest_files=["res://.godot/imported/items.blend-550e024b93b299d276d66868dc5f2de8.scn"]
 
 [params]
 
@@ -21,7 +21,7 @@ nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -31,30 +31,7 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Column": {
-"generate/physics": true,
-"physics/shape_type": 1
-},
-"PATH:Dalle": {
-"generate/physics": true,
-"physics/shape_type": 1
-},
-"PATH:Dalle_wall": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
-"PATH:Dalle_wall_corner": {
-"generate/physics": true,
-"physics/shape_type": 2
-},
-"PATH:Stair": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

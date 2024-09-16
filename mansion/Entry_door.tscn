@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3j0uj7too1rc"]
+
+[ext_resource type="PackedScene" uid="uid://cb4ftxrdx8ffa" path="res://assets3d/mansion/big_door.fbx" id="1_1c4hy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f083s"]
+size = Vector3(2, 2.79382, 0.414917)
+
+[node name="EntryDoor" type="StaticBody3D"]
+
+[node name="big_door" parent="." instance=ExtResource("1_1c4hy")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0117188, 1.37543, 0.0360718)
+shape = SubResource("BoxShape3D_f083s")

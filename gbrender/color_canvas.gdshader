@@ -33,6 +33,8 @@ void fragment() {
 	} else {
 		COLOR.rgb = color3;
 	}
+	
+	COLOR.a = 1.0;
 }
 
 //void light() {

@@ -25,8 +25,6 @@ func _physics_process(delta):
 	if input_dir.y:
 		direction.z = input_dir.y
 		direction = (self.global_transform * direction) - (self.global_transform * Vector3.ZERO)
-		print(input_dir)
-		print(direction)
 		
 	if direction.z:
 		velocity = direction * SPEED

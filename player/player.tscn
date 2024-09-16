@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://hhwqfeppxsiq"]
+[gd_scene load_steps=6 format=3 uid="uid://hhwqfeppxsiq"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gwx3d"]
 
@@ -10,9 +10,12 @@ height = 1.2
 radius = 0.345
 height = 0.6
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k23q3"]
-radius = 0.361763
-height = 1.65444
+[sub_resource type="BoxShape3D" id="BoxShape3D_b4nsb"]
+size = Vector3(0.832886, 1.76538, 1.00983)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pfa1p"]
+height = 1.37769
+radius = 0.303725
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_gwx3d")
@@ -26,16 +29,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43368, 0)
 mesh = SubResource("SphereMesh_6uho4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.881104, 0)
-shape = SubResource("CapsuleShape3D_k23q3")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000427246, 0.888306, -0.0853577)
+shape = SubResource("BoxShape3D_b4nsb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.418, -0.433384)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-shadow_enabled = true
+transform = Transform3D(1, 0, 0, 0, 0.985007, 0.172514, 0, -0.172514, 0.985007, 0, 1.10765, -0.452233)
+light_size = 1.695
+shadow_normal_bias = 5.648
 distance_fade_enabled = true
 distance_fade_begin = 10.0
 spot_range = 20.0
-spot_angle = 32.1244
+spot_angle = 46.49
+spot_angle_attenuation = 0.466516
+
+[node name="ActionTrigger" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.708924)
+shape = SubResource("CylinderShape3D_pfa1p")
