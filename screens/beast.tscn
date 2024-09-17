@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06kyarcf68yi"]
+
+[ext_resource type="Texture2D" uid="uid://bpe8n688myulu" path="res://arts/beast.png" id="1_2lgxd"]
+
+[node name="BeastScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2lgxd")
+centered = false

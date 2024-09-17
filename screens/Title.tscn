@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmu8bsijj12ed"]
+
+[ext_resource type="Texture2D" uid="uid://dd40dde0epm0a" path="res://arts/title_screen.png" id="1_gawv0"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gawv0")
+centered = false
